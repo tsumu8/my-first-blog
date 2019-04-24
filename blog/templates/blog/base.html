@@ -9,23 +9,14 @@
     </head>
     <body>
         <div class="page-header">
-          <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <h1><a href="/">Django Girls Blog</a></h1>
         </div>
         <div class="content container">
             <div class="row">
                 <div class="col-md-8">
-                  {% block content %}
-                      <div class="post">
-                          {% if post.published_date %}
-                              <div class="date">
-                                  {{ post.published_date }}
-                              </div>
-                          {% endif %}
-                          <h1>{{ post.title }}</h1>
-                          <p>{{ post.text|linebreaksbr }}</p>
-                      </div>
-                  {% endblock %}
-              </div>
+                {% block content %}
+                {% endblock %}
+                </div>
             </div>
         </div>
     </body></html>
